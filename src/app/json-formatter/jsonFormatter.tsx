@@ -51,6 +51,7 @@ const JsonFormatter = () => {
     } catch (e) {
       setError("Invalid JSON input");
       setJsonObject(null);
+      console.error(e);
     }
   };
 
@@ -58,7 +59,7 @@ const JsonFormatter = () => {
     navigator.clipboard.writeText(input);
   };
 
-  const JsonView = ({ data, level = 0 }: { data: any; level?: number }) => {
+  const JsonView = ({ data, level = 0 }: { data: unknown; level?: number }) => {
     const [isExpanded, setIsExpanded] = useState(level < 2);
 
     if (typeof data === "object" && data !== null) {
@@ -87,7 +88,7 @@ const JsonFormatter = () => {
 
           {isExpanded && (
             <div className="border-l-2 border-gray-200 dark:border-gray-700 pl-2 mt-1">
-              {Object.entries(data).map(([key, value], index) => (
+              {Object.entries(data).map(([key, value]) => (
                 <div key={key} className="my-1">
                   <span className="text-blue-600 dark:text-blue-400">
                     {isArray ? "" : `${key}: `}
