@@ -45,7 +45,7 @@ const structuredData = {
     "CSS Code Generation",
     "Dark Mode Support",
   ],
-};
+} as const;
 
 export default function FlexboxPlaygroundPage() {
   return (
