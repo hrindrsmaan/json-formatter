@@ -1,3 +1,4 @@
+// src/components/json-ld.tsx
 type WebApplicationStructuredData = {
   "@context": "https://schema.org";
   "@type": "WebApplication";
@@ -13,9 +14,7 @@ type WebApplicationStructuredData = {
   featureList: string[];
 };
 
-type StructuredData = WebApplicationStructuredData;
-
-export function JsonLd({ data }: { data: StructuredData }) {
+export function JsonLd({ data }: { data: WebApplicationStructuredData }) {
   return (
     <script
       type="application/ld+json"

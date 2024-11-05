@@ -50,7 +50,6 @@ const structuredData = {
 export default function FlexboxPlaygroundPage() {
   return (
     <>
-      <JsonLd data={structuredData} />
       <main className="min-h-screen bg-background">
         <div className="container mx-auto py-8 px-4">
           <header className="mb-8">
