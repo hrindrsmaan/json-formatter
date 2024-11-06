@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import FlexboxPlayground from "@/components/FlexboxPlayground/FlexboxPlayground";
-import { JsonLd } from "@/components/JsonLd/json-ld";
 
 export const metadata: Metadata = {
   title: "Flexbox Playground - Interactive CSS Flexbox Learning Tool",
@@ -24,28 +23,6 @@ export const metadata: Metadata = {
       "Learn and experiment with CSS Flexbox properties in real-time. Interactive tool for understanding flex container and item properties with live preview.",
   },
 };
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  name: "Flexbox Playground",
-  description:
-    "Interactive tool for learning and experimenting with CSS Flexbox properties",
-  applicationCategory: "DevelopmentTool",
-  operatingSystem: "Any",
-  offers: {
-    "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-  },
-  featureList: [
-    "Interactive Flex Container Properties",
-    "Interactive Flex Item Properties",
-    "Live Preview",
-    "CSS Code Generation",
-    "Dark Mode Support",
-  ],
-} as const;
 
 export default function FlexboxPlaygroundPage() {
   return (
