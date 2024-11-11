@@ -7,6 +7,9 @@ export default function HomePage() {
       <Link href="/json-formatter" className="text-blue-500 underline">
         Go to JSON Formatter
       </Link>
+      <Link href="/flexbox-playground" className="text-blue-500 underline">
+        Flexbox playground
+      </Link>
     </main>
   );
 }
