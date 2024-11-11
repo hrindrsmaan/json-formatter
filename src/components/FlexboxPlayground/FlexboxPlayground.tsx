@@ -240,20 +240,35 @@ const FlexboxPlayground = () => {
     </div>
   );
 
-  const containerStyle = {
+  // const containerStyle = {
+  //   display: "flex",
+  //   flexDirection,
+  //   justifyContent,
+  //   alignItems,
+  //   alignContent,
+  //   flexWrap,
+  //   gap: `${gap}rem`,
+  //   minHeight: "250px",
+  //   padding: "1rem",
+  //   backgroundColor: "#f3f4f6",
+  //   border: "2px dashed #d1d5db",
+  //   borderRadius: "0.5rem",
+  // };
+
+  const containerStyle: React.CSSProperties = {
     display: "flex",
-    flexDirection,
-    justifyContent,
-    alignItems,
-    alignContent,
-    flexWrap,
+    flexDirection: flexDirection as React.CSSProperties["flexDirection"],
+    justifyContent: justifyContent as React.CSSProperties["justifyContent"],
+    alignItems: alignItems as React.CSSProperties["alignItems"],
+    alignContent: alignContent as React.CSSProperties["alignContent"],
+    flexWrap: flexWrap as React.CSSProperties["flexWrap"],
     gap: `${gap}rem`,
     minHeight: "250px",
     padding: "1rem",
     backgroundColor: "#f3f4f6",
     border: "2px dashed #d1d5db",
     borderRadius: "0.5rem",
-  } as const;
+  };
 
   const boxes = [1, 2, 3, 4, 5];
 
